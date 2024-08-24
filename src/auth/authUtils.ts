@@ -1,5 +1,4 @@
 import * as JWT from "jsonwebtoken";
-import crypto from "crypto";
 
 export const createTokenPair = async (
   paload: any,
@@ -17,8 +16,8 @@ export const createTokenPair = async (
     });
 
     JWT.verify(accessToken, publicKey, (err, decoded) => {
-      if (err) console.log("decode err: ", err);
-      if (decoded) console.log("decoded success: ", decoded);
+      // if (err) console.log("decode err: ", err);
+      // if (decoded) console.log("decoded success: ", decoded);
     });
     return {
       accessToken,

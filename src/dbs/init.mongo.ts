@@ -14,10 +14,10 @@ class Database {
   }
 
   connect(type = "mongodb") {
-    // if (1 === 1) {
-    //   mongoose.set("debug", true);
-    //   mongoose.set("debug", { color: true });
-    // }
+    if (1 === 1) {
+      mongoose.set("debug", true);
+      mongoose.set("debug", { color: true });
+    }
 
     // poolSize: opended connections from the app to db
     // The opened connection can defer their closing step so that they can

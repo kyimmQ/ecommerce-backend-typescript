@@ -7,7 +7,7 @@ class AccessController {
   signUp = async (req: Request, res: Response, next: NextFunction) => {
     try {
       console.log(`[P]::signUp::`, req.body);
-      res.status(201).json(await AccessService.signUp(req.body));
+      res.status(201).json(await AccessService.createNewUser(req.body));
     } catch (error) {
       next(error);
     }

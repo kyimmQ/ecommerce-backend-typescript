@@ -14,7 +14,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // init db
 import "./dbs/init.mongo";
+import accessRouter from "./routes/access";
 //init routes
+
+// access route
+app.use("/", accessRouter);
+
+// protected routes
 app.use("/", routes);
 // handling error
 

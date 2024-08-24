@@ -31,7 +31,7 @@ interface SignUpResponse {
 }
 
 class AccessService {
-  static signUp = async ({
+  static createNewUser = async ({
     name,
     email,
     password,
@@ -71,8 +71,6 @@ class AccessService {
             format: "pem",
           },
         });
-        console.log("publicKey", publicKey);
-        console.log("privateKey", privateKey);
         const publicKeyString = await KeyTokenService.generateKeyToken({
           userId: newShop._id,
           publicKey,
